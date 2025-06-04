@@ -120,34 +120,45 @@ body, h1,h2,h3,h4,h5,h6 { font-family: "Montserrat", sans-serif;
       margin: 10px;
     }
 
-      .project-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+  }
 
-.project-card img {
-  object-fit: cover;
-  height: 200px;
-  width: 100%;
-}
+  .project-card {
+    flex: 1 1 calc(33.333% - 24px);
+    background-color: #1c1c1c; /* Puedes ajustar según el diseño */
+    color: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+  }
 
-.project-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 16px;
-}
+  .project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.project-content h3 {
-  margin-top: 0;
-}
+  .project-card .w3-container {
+    padding: 16px;
+  }
 
-.project-content p {
-  margin-bottom: 0;
-}
+  @media screen and (max-width: 992px) {
+    .project-card {
+      flex: 1 1 calc(50% - 24px);
+    }
+  }
 
+  @media screen and (max-width: 600px) {
+    .project-card {
+      flex: 1 1 100%;
+    }
+  }
 
 
 </style>
