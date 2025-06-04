@@ -120,53 +120,33 @@ body, h1,h2,h3,h4,h5,h6 { font-family: "Montserrat", sans-serif;
       margin: 10px;
     }
 
-  .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: space-between;
-  }
+ .project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-  .project-card {
-    flex: 1 1 calc(33.333% - 24px);
-    background-color: #1c1c1c;
-    color: white;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-  }
+.project-card img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+}
 
-  .project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
+.project-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
 
-  .project-card .w3-container {
-    padding: 12px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+.project-content h3 {
+  margin-top: 0;
+}
 
-  .project-card h3 {
-    margin-top: 0;
-    font-size: 16px;
-    color: #ffd700; /* Opcional: resalta los títulos */
-  }
-
-  @media screen and (max-width: 992px) {
-    .project-card {
-      flex: 1 1 calc(50% - 24px);
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .project-card {
-      flex: 1 1 100%;
-    }
-  }
+.project-content p {
+  margin-bottom: 0;
+}
 
 </style>
 </head>
@@ -491,21 +471,23 @@ Línea de Investigación a las que pertenece: <BR></BR>
   <div class="project-container">
 
     <!-- Proyecto 1 -->
-    <div class="project-card">
-      <img src="itsl.jpg" alt="evaluacion">
-      <div class="w3-container">
-        <h3>Evaluación</h3>
-        <p>Evaluación de la Intervención Educativa Transversal para la Atención de los Factores Psicosociales Incidentes en la
-        Adquisición de las Habilidades Profesionales en los Estudiantes del TECNM / Instituto Tecnológico Superior de Lerdo.
-        Tecnológico Nacional de México. 2025</p>
-      </div>
+    <div class="w3-third w3-margin-bottom">
+  <div class="w3-card-4 project-card">
+    <img src="itsl.jpg" alt="evaluacion">
+    <div class="w3-container project-content">
+      <h3>Evaluación</h3>
+      <p>Evaluación de la Intervención Educativa Transversal para la Atención de los Factores Psicosociales Incidentes en la
+      Adquisición de las Habilidades Profesionales en los Estudiantes del TECNM / Instituto Tecnológico Superior de Lerdo.
+      Tecnológico Nacional de México. 2025</p>
     </div>
+  </div>
+</div>
 
     <!-- Proyecto 2 -->
     <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="787417.jpg" alt="Modelo de Intervención" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Modelo de Intervención</h3>
       <p>Modelo de Intervención Educativa Transversal para la Atención de los Factores Psicosociales que inciden en la Adquisición de las Habilidades Profesionales en los Estudiantes del TecNM campus Lerdo.</p>
     </div>
@@ -515,9 +497,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 3 -->
   <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="universidad_1044_g_74496.jpg" alt="Estrategias Educativas" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Estrategias Educativas</h3>
       <p>“Estrategias Educativas para el Fomento de un Estilo De Vida Sostenible y Evaluación de su Impacto en la Comunidad de la Región Lagunera” Tecnológico Nacional de México. 2024</p>
     </div>
@@ -526,9 +508,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 4 -->
    <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="universidad_1044_g_74496.jpg" alt="Campaña de Retos" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Campaña de Retos</h3>
       <p>“Campaña de retos y Actividades para Educar en los Objetivos del Desarrollo Sustentable en Cumplimiento de la Agenda 2030 por parte del Club Familia Sustentable del ITSLERDO” – COCYTED. 2022</p>
     </div>
@@ -537,9 +519,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 5 -->
   <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="itsl.jpg" alt="Estrategias Educativas" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Estrategias Educativas</h3>
       <p>“Campaña de retos y Actividades para Educar en los Objetivos del Desarrollo Sustentable en Cumplimiento de la Agenda 2030 por parte del Club Familia Sustentable del ITSLERDO” – COCYTED. 2022</p>
     </div>
@@ -548,9 +530,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 6 -->
     <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="787417.jpg" alt="Sistema Web" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Sistema Web</h3>
       <p>“Sistema Web para el Control de las Actividades Complementarias en el TecNM campus Lerdo” Tecnológico Nacional de México. 2022</p>
     </div>
@@ -559,9 +541,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 7 -->
   <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="APP.jpg" alt="Covid-App" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Covid-App</h3>
       <p>“Covid-App. Prototipo de una Aplicación Móvil Compatible con Distintas Plataformas, para el Control de Vacunación contra Covid-19 en México” Tecnológico Nacional de México. 2022</p>
     </div>
@@ -571,9 +553,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
         
     <!-- Proyecto 8 -->
    <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="Consejo_Nacional_de_Humanidades_Ciencias_y_Tecnologías.png" alt="Análisis Dimensional" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Análisis Dimensional</h3>
       <p>“Análisis Dimensional y Optimización de Línea de Molienda-Clasificación de Carbonato de Calcio Técnico”. CONACYT. 2014</p>
     </div>
@@ -582,9 +564,9 @@ Línea de Investigación a las que pertenece: <BR></BR>
 
     <!-- Proyecto 9 -->
    <div class="w3-third w3-margin-bottom">
-  <div class="w3-card-4">
+  <div class="w3-card-4 project-card">
     <img src="Consejo_Nacional_de_Humanidades_Ciencias_y_Tecnologías.png" alt="Ecosistema de Aprendizaje" style="width:100%; height:auto;">
-    <div class="w3-container">
+    <div class="w3-container project-content">
       <h3>Ecosistema de Aprendizaje</h3>
       <p>“Ecosistema de Aprendizaje para Mejorar el Pensamiento Matemático en Preescolar con Realidad Aumentada”. CONACYT. 2016</p>
     </div>
